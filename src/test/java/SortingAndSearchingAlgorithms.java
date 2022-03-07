@@ -21,4 +21,14 @@ public class SortingAndSearchingAlgorithms {
         object.selectionSort(data);
         Assertions.assertArrayEquals(expected,data);
     }
+    @Test
+    void insertionSort(){
+        int[] data = { -2, 45, 0, 11, -9 };
+        int[] expected = {-9,-2,0,11,45};
+
+        InsertionSort object = new InsertionSort();
+        object.insertionSort(data);
+        Assertions.assertArrayEquals(expected, data);
+    }
+
 }
