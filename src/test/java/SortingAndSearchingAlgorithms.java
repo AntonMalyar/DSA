@@ -10,6 +10,8 @@ public class SortingAndSearchingAlgorithms {
 
         BubbleSort object = new BubbleSort();
         object.bubbleSort(data);
+
+
         Assertions.assertArrayEquals(expected,data);
     }
     @Test
@@ -19,6 +21,7 @@ public class SortingAndSearchingAlgorithms {
 
         SelectionSort object = new SelectionSort();
         object.selectionSort(data);
+
         Assertions.assertArrayEquals(expected,data);
     }
     @Test
@@ -28,6 +31,17 @@ public class SortingAndSearchingAlgorithms {
 
         InsertionSort object = new InsertionSort();
         object.insertionSort(data);
+
+        Assertions.assertArrayEquals(expected, data);
+    }
+    @Test
+    void mergeSort(){
+        int[] data = { -2, 45, 0, 11, -9 };
+        int[] expected = {-9,-2,0,11,45};
+
+        MergeSort object = new MergeSort();
+        object.mergeSort(data);
+
         Assertions.assertArrayEquals(expected, data);
     }
 
